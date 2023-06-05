@@ -1,0 +1,403 @@
+:root{
+    --orange_wheel:#fa7d07;
+    --apple_green:#7CB518;
+    --avocado:#5C8001;
+    --xanthous:#FBB02D;
+    --sunset:#FFCE79;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+  }
+/*Navegación*/
+.container{
+    width: 100%;
+    max-width: 2000px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0;
+    padding: 10px 20px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.nav_logo{
+    width: 11%;
+}
+.nav_img{
+    width: 100%;
+    max-width: 60px;
+    display: block;
+}
+.nav_link:first-of-type{
+    margin-left: auto;
+}
+.nav_link{
+    text-decoration: none;
+    color: var(--orange_wheel);
+    font-size: 0.9rem;
+}
+
+/*Header*/
+.hero_main{
+    width: 100%;
+    max-width: 2000px;
+    height: 250px;
+    padding: 30px 0;
+    background: var(--apple_green);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(77, 98%, 25%, 0.7), hsla(38, 96%, 58%, 0.7)), url(../images/anna-pelzer-IGfIGP5ONV0-unsplash.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(82, 77%, 40%, 0.7), hsla(38, 96%, 58%, 0.7)), url(../images/anna-pelzer-IGfIGP5ONV0-unsplash.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    position: relative;
+}
+.hero_title{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 30px;
+}
+.hero_paragraph{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/*Main*/
+.contenedor{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    background-color: var(--orange_wheel)
+}
+.main{
+    max-width: 2000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "about"
+    "image1"
+    "curso"
+    "image2"
+    "action"
+    "form";
+}
+.main_about{
+    grid-area: about;
+}
+.main_title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.main_paragraph{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1em;
+    text-align: justify;
+}
+.main_paragraph_2{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1em;
+    text-align: center;
+    font-weight: 700;
+}
+.curso_paragraph{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-left: 0.8em;
+    text-align: justify;
+}
+.main_bg{
+    grid-area: image1;
+    min-height: 250px;
+    height: 100%;
+    background-image: url(../images/veganismo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main_cursos{
+    grid-area: curso;
+    background-color: var(--apple_green);
+}
+.main_bg--second{
+    grid-area: image2;
+    background-image: url(../images/imagen03.jpg);
+}
+
+/*Formulario*/
+.main_action{
+    grid-area: action;
+    background-image: url(../images/logo01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form{
+    grid-area: form;
+    margin: 0 auto;
+    padding: 1em;
+}
+.title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: var(--apple_green);
+}
+.paragraph{
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--avocado);
+}
+ul{
+    list-style: none;
+}
+li{
+    padding: 10px 0;
+}
+.form_label{
+    display: inline-block;
+    width: 100px;
+    font-size: 1rem;
+    text-align: right;
+    color: var(--orange_wheel)
+}
+.form_name{
+    width: 150px;
+    height: 1.5em;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--orange_wheel)
+}
+.button{
+    background-color: var(--xanthous);
+    border: none;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 1em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*Testimonios*/
+.testimonios{
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "titulo"
+    "card1"
+    "card2"
+    "card3";
+}
+.testimonios_title{
+    grid-area: titulo;
+    text-align: center;
+    padding: 50px;
+    margin: 0 auto;
+}
+.persona1_img{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/persona1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.persona2_img{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/persona2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.persona3_img{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/persona3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.paragraph_testimonio{
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 50px;
+}
+.nombre_testimonio{
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+
+/*Footer*/
+.footer{
+    width: 100%;
+    max-width: 2000px;
+    overflow: hidden;
+    padding: 10px 20px;
+    background-color: var(--avocado);
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "logo logo"
+    "logo logo"
+    "link1 facebook"
+    "link2 instagram"
+    "link3 twitter"
+    "link4 whatsapp";
+}
+.footer_logo{
+    width: 100px;
+    grid-area: logo;
+    margin: 0 auto;
+}
+.footer_img{
+    width: 100%;
+}
+.footer_link1{
+    grid-area: link1;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+}
+.footer_link2{
+    grid-area: link2;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+}
+.footer_link3{
+    grid-area: link3;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+    }
+.footer_link4{
+    grid-area: link4;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+    }
+.icon1{
+    grid-area: facebook;
+    margin-left: 100px;
+    width: 30px;
+}
+.icon2{
+    grid-area: instagram;
+    margin-left: 100px;
+    width: 30px;
+}
+.icon3{
+    grid-area: twitter;
+    margin-left: 100px;
+    width: 30px;
+}
+.icon4{
+    grid-area: whatsapp;
+    margin-left: 100px;
+    width: 30px;
+}
+
+/*Diseño desktop*/
+@media (min-width:720px){
+    .nav_link{
+        font-size: 1.2rem;
+    }
+    .nav{
+        gap: 3em;
+    }
+    .hero_main{
+        height: 350px;
+        padding: 60px;
+    }
+    .hero_paragraph{
+        font-size: 1.5rem;
+    }
+    .main{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "about image1"
+        "image2 curso"
+        "action form";
+    }
+    .paragraph{
+        font-size: 1.2rem;
+    }
+    .form_label{
+        font-size: 1.2rem;
+    }
+    .button{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .testimonios{
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "card1 card2 card3";
+    }
+    .main_paragraph{
+        font-size: 1.3rem;
+    }
+    .main_paragraph_2{
+        font-size: 1.3rem;
+    }
+    .curso_paragraph{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .footer{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "logo logo link1 link1 facebook"
+        "logo logo link2 link2 instagram"
+        "logo logo link3 link3 twitter"
+        "logo logo link4 link4 whatsapp";
+    }
+    .footer_logo{
+        width: 45%;
+        max-width: 150px;
+        margin: auto;
+    }
+
+}
